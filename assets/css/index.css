@@ -1,0 +1,12 @@
+*:not(head),
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(87, 82, 82);
+}

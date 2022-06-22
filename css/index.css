@@ -12,6 +12,8 @@ body {
   height: 100%;
   font-size: 18px;
   line-height: 180%; }
+  body.lock {
+    overflow: hidden; }
   body header {
     position: fixed;
     top: 0;
@@ -36,7 +38,7 @@ body {
     body main p {
       margin-bottom: 4%; }
       body main p a {
-        color: black; }
+        color: red; }
   body .popup {
     position: fixed;
     width: 100%;
@@ -79,9 +81,9 @@ body {
         body .popup .popup-body .popup-content .popup-title {
           font-size: 30px;
           margin: 0px 0px 1em 0px; }
-    body .popup:target {
+    body .popup.open {
       opacity: 1;
       visibility: visible; }
-      body .popup:target .popup-content {
+      body .popup.open .popup-content {
         transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
         opacity: 1; }

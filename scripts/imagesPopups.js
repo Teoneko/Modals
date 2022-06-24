@@ -23,6 +23,20 @@ function createPopup() {
 		let img = document.createElement('img');
 		img.src = `images/${index}.jpg`;
 		div4.append(img)
+		let a2 = document.createElement('a');
+		if (index > 1) {
+			a2.innerHTML = '<';
+			a2.href = `#image-${index - 1}`;
+			a2.className = 'content-image popup-link'
+		}
+		div2.prepend(a2)
+		let a3 = document.createElement('a');
+		if (index < images.length) {
+			a3.innerHTML = '>';
+			a3.href = `#image-${index + +1}`;
+			a3.className = 'content-image popup-link'
+		}
+		div2.append(a3)
 	}
 }
 

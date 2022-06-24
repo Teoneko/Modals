@@ -27,9 +27,7 @@ body {
       align-items: center;
       width: 70%; }
       body header div img {
-        width: 10%;
-        padding-top: 1%;
-        padding-bottom: 1%; }
+        width: 10%; }
       body header div a {
         color: aliceblue; }
   body main {
@@ -39,6 +37,18 @@ body {
       margin-bottom: 4%; }
       body main p a {
         color: red; }
+    body main .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between; }
+      body main .gallery a {
+        width: 30%; }
+        body main .gallery a img {
+          width: 100%; }
+  body #popup .popup-body .popup-content,
+  body #popup-2 .popup-body .popup-content {
+    max-width: 70%; }
   body .popup {
     position: fixed;
     width: 100%;
@@ -50,15 +60,11 @@ body {
     visibility: hidden;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: all 0.8s ease 0s; }
-    body .popup .popup-area {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0; }
+    transition: all 0.5s ease 0s;
+    cursor: pointer; }
     body .popup .popup-body {
-      min-height: 100%;
+      height: 100%;
+      width: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -67,11 +73,10 @@ body {
         position: relative;
         background-color: white;
         color: black;
-        max-width: 50%;
         padding: 30px;
-        transition: all 0.8s ease 0s;
+        transition: all 0.5s ease 0s;
         opacity: 0;
-        transform: perspective(600px) translate(0px, -100%) rotateX(45deg); }
+        transform: scale(-0.2); }
         body .popup .popup-body .popup-content .popup-close {
           position: absolute;
           right: 10px;
@@ -81,9 +86,18 @@ body {
         body .popup .popup-body .popup-content .popup-title {
           font-size: 30px;
           margin: 0px 0px 1em 0px; }
+      body .popup .popup-body .popup-content-image {
+        padding: 0; }
+        body .popup .popup-body .popup-content-image .popup-image {
+          max-height: 50em; }
+          body .popup .popup-body .popup-content-image .popup-image img {
+            max-height: 50em;
+            width: 100%;
+            vertical-align: top;
+            cursor: default; }
     body .popup.open {
       opacity: 1;
       visibility: visible; }
       body .popup.open .popup-content {
-        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        transform: scale(1);
         opacity: 1; }

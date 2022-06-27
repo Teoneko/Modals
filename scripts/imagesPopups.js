@@ -24,6 +24,7 @@ function createPopup() {
 		img.src = `images/${index}.jpg`;
 		div4.append(img)
 		let a2 = document.createElement('a');
+		a2.id = 'prevLink';
 		if (index > 1) {
 			a2.innerHTML = '<';
 			a2.href = `#image-${index - 1}`;
@@ -31,6 +32,7 @@ function createPopup() {
 		}
 		div2.prepend(a2)
 		let a3 = document.createElement('a');
+		a3.id = 'nextLink';
 		if (index < images.length) {
 			a3.innerHTML = '>';
 			a3.href = `#image-${index + +1}`;

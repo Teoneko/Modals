@@ -14,41 +14,45 @@ body {
   line-height: 180%; }
   body.lock {
     overflow: hidden; }
-  body header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: black;
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center; }
+  header div {
     display: flex;
-    justify-content: center; }
-    body header div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 70%; }
-      body header div img {
-        width: 10%; }
-      body header div a {
-        color: aliceblue; }
-  body main {
-    width: 70%;
-    margin: 10% auto 0 auto; }
-    body main p {
-      margin-bottom: 4%; }
-      body main p a {
-        color: red; }
-    body main .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between; }
-      body main .gallery a {
-        width: 30%; }
-        body main .gallery a img {
-          width: 100%; }
-  body #popup .popup-body .popup-content,
-  body #popup-2 .popup-body .popup-content {
-    max-width: 70%; }
+    justify-content: space-between;
+    align-items: center;
+    width: 70%; }
+    header div img {
+      width: 10%; }
+    header div a {
+      color: aliceblue; }
+
+main {
+  width: 70%;
+  margin: 10% auto 0 auto; }
+  main p {
+    margin-bottom: 4%; }
+    main p a {
+      color: red; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+  .gallery a {
+    width: 30%; }
+    .gallery a img {
+      width: 100%; }
+
+#popup .popup-body .popup-content,
+#popup-2 .popup-body .popup-content {
+  max-width: 70%; }
 
 .popup {
   position: fixed;
@@ -63,48 +67,70 @@ body {
   overflow-x: hidden;
   transition: all 0.5s ease 0s;
   cursor: pointer; }
-  .popup-body {
-    height: 100%;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 3% 1%; }
-    .popup-body .content-image {
-      font-size: 40px;
-      text-decoration: none;
-      color: white; }
-    .popup-body .popup-content {
-      position: relative;
-      background-color: white;
-      color: black;
-      padding: 30px;
-      transition: all 0.5s ease 0s;
-      opacity: 0;
-      transform: scale(-0.2); }
-      .popup-body .popup-content .popup-close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        color: black;
-        text-decoration: none; }
-      .popup-body .popup-content .popup-title {
-        font-size: 30px;
-        margin: 0px 0px 1em 0px; }
-    .popup-body .popup-content-image {
-      padding: 0; }
-      .popup-body .popup-content-image .popup-image {
-        max-height: 50em; }
-        .popup-body .popup-content-image .popup-image img {
-          max-height: 50em;
-          width: 100%;
-          vertical-align: top;
-          cursor: default; }
-      .popup-body .popup-content-image .popup-close {
-        color: white; }
-  .popup.open {
-    opacity: 1;
-    visibility: visible; }
-    .popup.open .popup-content {
-      transform: scale(1);
-      opacity: 1; }
+
+.popup-body {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .popup-body #prevLink,
+  .popup-body #nextLink {
+    height: 70%;
+    width: 20%;
+    text-align: center;
+    line-height: 1600%; }
+    .popup-body #prevLink:hover,
+    .popup-body #nextLink:hover {
+      font-size: 60px;
+      line-height: 1070%; }
+
+#popup .popup-body,
+#popup-2 .popup-body {
+  justify-content: center; }
+
+.content-image {
+  font-size: 40px;
+  text-decoration: none;
+  color: white; }
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  transform: scale(-0.2); }
+
+.popup-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: black;
+  text-decoration: none; }
+
+.popup-title {
+  font-size: 30px;
+  margin: 0px 0px 1em 0px; }
+
+.popup-content-image {
+  padding: 0; }
+
+.popup-image {
+  max-height: 50em; }
+  .popup-image img {
+    max-height: 50em;
+    width: 100%;
+    vertical-align: top;
+    cursor: default; }
+
+.popup-close {
+  color: white; }
+
+.popup.open {
+  opacity: 1;
+  visibility: visible; }
+  .popup.open .popup-content {
+    transform: scale(1);
+    opacity: 1; }
